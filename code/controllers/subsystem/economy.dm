@@ -1,6 +1,7 @@
 SUBSYSTEM_DEF(economy)
 	name = "Economy"
 	wait = 5 MINUTES
+	flags = SS_NO_INIT | SS_NO_FIRE | SS_NO_TICK_CHECK
 	init_order = INIT_ORDER_ECONOMY
 	runlevels = RUNLEVEL_GAME
 	var/roundstart_paychecks = 5

@@ -4380,5 +4380,7 @@
 #include "modular_sand\code\modules\vending\clothesmate.dm"
 #include "modular_sand\code\modules\vending\kinkmate.dm"
 #include "modular_sand\code\modules\vending\wardrobes.dm"
+#include "modular_signal\code\_job.dm"
+#include "modular_signal\code\signals\_signal.dm"
 #include "tools\Redirector\textprocs.dm"
 // END_INCLUDE
