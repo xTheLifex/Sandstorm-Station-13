@@ -70,8 +70,3 @@ GLOBAL_LIST_EMPTY(transformers)
 /obj/machinery/power_transformer/Destroy()
 	GLOB.transformers[id] = null
 	return ..()
-
-/obj/item/maxwell
-	name = "dingus"
-	icon = 'modular_signal/icons/obj/items.dmi'
-	state = "maxwell"
