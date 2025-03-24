@@ -4039,6 +4039,7 @@
 #include "modular_citadel\code\modules\vectorcrafts\vectorvariants.dm"
 #include "modular_fox\code\datums\traits\neutral_quirks\storage_concealment.dm"
 #include "modular_fox\code\game\objects\items\implants\implant_hide_backpack.dm"
+#include "modular_fox\code\modules\mob\living\carbon\human\human_update_icons.dm"
 #include "modular_fox\code\modules\mob\living\carbon\human\species_types\anthropomorph.dm"
 #include "modular_sand\code\_globalvars\bitfields.dm"
 #include "modular_sand\code\_globalvars\lists\lewd_content.dm"
