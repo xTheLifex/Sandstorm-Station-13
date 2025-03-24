@@ -1,4 +1,0 @@
-# This file is mostly so main config file relays to here, and this one relays to the rest
-$include sandstorm/balance.txt
-$include sandstorm/config.txt
-$include sandstorm/qol.txt
