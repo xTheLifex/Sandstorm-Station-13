@@ -362,7 +362,7 @@
 
 			if (G.type == /obj/item/organ/genital/breasts)
 				var/mutable_appearance/areola = mutable_appearance(accessory_icon, layer = -layer)
-				areola.color = "#[dna.features["breasts_color"]]"
+				areola.color = "#[dna.features["areola_color"]]"
 				areola.icon_state = "m_[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[layertext]_secondary"
 				if(layers_num[layer] == GENITALS_FRONT_LAYER && G.genital_flags & GENITAL_THROUGH_CLOTHES)
 					areola.layer = -GENITALS_EXPOSED_LAYER
