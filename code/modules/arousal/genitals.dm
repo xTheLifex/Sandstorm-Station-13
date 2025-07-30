@@ -346,7 +346,12 @@
 					if("butt_color")
 						genital_overlay.color = "#[dna.features["butt_color"]]"
 
-			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[aroused_state]_[layertext]"
+			if (G.type == /obj/item/organ/genital/breasts)
+				var/obj/item/organ/genital/breasts/B = G
+				size = B.cached_size
+				genital_overlay.icon_state = "m_[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[layertext]_primary"
+			else
+				genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[aroused_state]_[layertext]"
 
 			if(layers_num[layer] == GENITALS_FRONT_LAYER && G.genital_flags & GENITAL_THROUGH_CLOTHES)
 				genital_overlay.layer = -GENITALS_EXPOSED_LAYER
@@ -354,6 +359,17 @@
 			else
 				genital_overlay.layer = -layers_num[layer]
 				standing += genital_overlay
+
+			if (G.type == /obj/item/organ/genital/breasts)
+				var/mutable_appearance/areola = mutable_appearance(accessory_icon, layer = -layer)
+				areola.color = "#[dna.features["breasts_color"]]"
+				areola.icon_state = "m_[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[layertext]_secondary"
+				if(layers_num[layer] == GENITALS_FRONT_LAYER && G.genital_flags & GENITAL_THROUGH_CLOTHES)
+					areola.layer = -GENITALS_EXPOSED_LAYER
+					LAZYADD(fully_exposed, genital_overlay)
+				else
+					areola.layer = -layers_num[layer]
+					standing += areola
 
 		if(LAZYLEN(standing))
 			overlays_standing[layers_num[layer]] = standing

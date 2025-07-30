@@ -108,7 +108,7 @@
 
 //BREASTS BE HERE
 /datum/sprite_accessory/breasts
-	icon = 'icons/obj/genitals/breasts_onmob.dmi'
+	icon = 'modular_fox/icons/obj/genitals/breasts_onmob.dmi'
 	name = "breasts"
 	color_src = "breasts_color"
 
